@@ -39,6 +39,7 @@ def isPrime(number, temp = 2):
         pass
     
     # Recursion until all integars are checked
+    print(temp)
     return isPrime(number, temp + 1)
 
 # Function to find largest prime factor
@@ -63,7 +64,7 @@ def largestPrimeFactor(number):
 if __name__ == '__main__':
     # Increase recurssion limit and thread stack size to facilitate large number
     setrecursionlimit(800000)
-    threading.stack_size(0x2000000)
+    threading.stack_size(260000000)
 
     # Run main() in custom thread with large stack size
     t = threading.Thread(target=main())
